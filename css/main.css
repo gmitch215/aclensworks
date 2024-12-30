@@ -1,5 +1,15 @@
 /* Copyright 2024 Gregory Mitchell */
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 :root {
     --primary-color: #64d9fc;
     --dark-primary-color: #00a8cc;
@@ -34,6 +44,16 @@ html, body, main {
     padding: 0;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
+h4 {
+    font-weight: 500;
+    margin: 0;
+    font-style: italic;
+}
+
 a {
     color: var(--link-color);
     text-decoration: none;
@@ -57,6 +77,19 @@ a {
     flex-direction: column;
 }
 
+.background {
+    width: 100%;
+
+    filter: blur(3px);
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
 #logo {
     height: auto;
     width: 10vw;
@@ -64,6 +97,7 @@ a {
 
     border: 4px solid black;
     border-radius: 25%;
+    margin-top: 1vh;
 }
 
 #logo:hover {
@@ -76,6 +110,120 @@ a {
 header {
     width: 100%;
     height: 5vh;
+}
 
-    margin-bottom: 5vh;
+/* Site */
+
+#top {
+    height: 60vh;
+    color: white;
+}
+
+#top-bg {
+    height: 60vh;
+}
+
+#about {
+    padding: 6vh 0;
+    border-top: 4px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#about > div {
+    width: 40%;
+}
+
+#about > img {
+    border: 4px solid var(--dark-primary-color);
+    border-radius: 8px;
+
+    min-width: 256px;
+    width: 15%;
+    height: auto;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+#about > img:hover {
+    transform: translateX(-4vw) scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+#services {
+    padding-top: 2vh;
+    padding-bottom: 8vh;
+
+    background: lightgray;
+}
+
+#services > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#services > div > div {
+    background: white;
+    border: 4px solid var(--dark-primary-color);
+    border-radius: 8px;
+    padding: 1vh;
+
+    width: 20%;
+    font-size: 0.9em;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+#services > div > div:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+#example {
+    padding-bottom: 8vh;
+}
+
+#example > iframe {
+    border: 8px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+#contact-us {
+    padding-top: 2vh;
+    padding-bottom: 10vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;;
+}
+
+#contact-us > div {
+    padding-top: 2vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2vw;
+}
+
+#contact-us > div > a {
+    width: 2%;
+    min-width: 64px;
+}
+
+#contact-us > div > a > img {
+    border-radius: 25%;
+    aspect-ratio: 1;
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+#contact-us > div > a > img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
 }

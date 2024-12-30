@@ -2,8 +2,47 @@
 layout: default
 ---
 
-<div class="box">
+<div class="box" id="top">
+    <img class="background" id="top-bg" src="/assets/flossmoor1.jpg" alt="Flossmoor"/>
     <img id="logo" src="/favicon_app.png" alt="Logo"/>
     <h1>{{ site.title }}</h1>
+    <h4>Since {{ site.year }}</h4>
     <h3>{{ site.description }}</h3>
+</div>
+
+<div class="box bg-secondary" id="about">
+    <div>
+        <h2>Efficient, Reliable, Local</h2>
+        {{ content }}
+    </div>
+    <img src="/assets/cook-county.jpg" alt="Cook County"/>
+</div>
+
+<div class="box" id="services">
+    <h2>Services</h2>
+    <div>
+        {% for service in site.data.services %}
+        <div>
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="box bg-secondary" id="example">
+    <h1>Example</h1>
+    <h2>Hidden Gem Guitars - Flossmoor, IL</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9C_DFOsihrY?si=dOQOdtuEh9RQ9oVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="box bg-primary" id="contact-us">
+    <h1>Convinced?</h1>
+    <h2>Contact Us!</h2>
+    <div>
+        <a href="tel:{{ site.phone_number | replace: '-', '' }}"><img src="/assets/phone.png" alt="Phone"></a>
+        {% for contact in site.data.contact %}
+        <a href="{{ contact.url }}" title="{{ contact.name }}"><img src="{{ contact.img }}" alt="{{ contact.name }}"></a>
+        {% endfor %}
+    </div>
 </div>

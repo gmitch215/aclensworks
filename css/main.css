@@ -192,6 +192,7 @@ header {
 #example > iframe {
     aspect-ratio: 16 / 9;
     width: 90vw;
+    max-width: 576px;
     height: auto;
 
     border: 8px solid var(--primary-color);

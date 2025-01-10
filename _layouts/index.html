@@ -49,10 +49,21 @@ layout: default
 <div class="box bg-primary" id="contact-us">
     <h1>Convinced?</h1>
     <h2>Contact Us!</h2>
+    <img src="/assets/about.jpg" alt="About"/>
     <div>
-        <a href="tel:{{ site.phone_number | replace: '-', '' }}"><img src="/assets/phone.png" alt="Phone"></a>
-        {% for contact in site.data.contact %}
-        <a href="{{ contact.url }}" title="{{ contact.name }}"><img src="{{ contact.img }}" alt="{{ contact.name }}"></a>
-        {% endfor %}
+        <div>
+            {% for person in site.data.about %}
+            <div>
+                <h3>{{ person.name }}</h3>
+                <p>{{ person.title }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div>
+            <a href="tel:{{ site.phone_number | replace: '-', '' }}"><img src="/assets/phone.png" alt="Phone"></a>
+            {% for contact in site.data.contact %}
+            <a href="{{ contact.url }}" title="{{ contact.name }}"><img src="{{ contact.img }}" alt="{{ contact.name }}"></a>
+            {% endfor %}
+        </div>
     </div>
 </div>

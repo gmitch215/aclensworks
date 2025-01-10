@@ -1,24 +1,32 @@
-- name: Videos
+- name: Package 1 - $30
+  id: package-1
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac accumsan nisl, ac varius lacus. 
-    Cras porttitor sodales ex, eget laoreet odio placerat vel. Sed interdum dapibus sollicitudin. 
-    Ut ultrices feugiat erat, ac lobortis enim luctus sed. Nunc vitae risus massa. Vivamus vitae arcu consequat, facilisis arcu in, efficitur sapien. 
-    Etiam at orci euismod, venenatis nibh sit amet, venenatis lectus. Nunc efficitur laoreet dolor at molestie. 
-    Nam tincidunt odio leo, vitae blandit augue mollis sed. Aenean finibus sem vel felis eleifend auctor. 
-    Nunc consectetur posuere orci. Duis tellus ligula, blandit molestie magna ac, maximus semper diam. 
-- name: Photography
+    We will go inside your business and take professional photos of your products and services. This package is
+    highly recommended for newly opened businesses that want to make an impact on the Homewood-Flossmoor community.
+  example:
+    description: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Morbi scelerisque varius ex in lobortis.
+      Nunc consequat tincidunt odio, ut porta ex volutpat non. 
+      Nunc dignissim tellus velit, id dictum urna vulputate et.
+- name: Package 2 - $70
+  id: package-2
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac accumsan nisl, ac varius lacus. 
-    Cras porttitor sodales ex, eget laoreet odio placerat vel. Sed interdum dapibus sollicitudin. 
-    Ut ultrices feugiat erat, ac lobortis enim luctus sed. Nunc vitae risus massa. Vivamus vitae arcu consequat, facilisis arcu in, efficitur sapien. 
-    Etiam at orci euismod, venenatis nibh sit amet, venenatis lectus. Nunc efficitur laoreet dolor at molestie. 
-    Nam tincidunt odio leo, vitae blandit augue mollis sed. Aenean finibus sem vel felis eleifend auctor. 
-    Nunc consectetur posuere orci. Duis tellus ligula, blandit molestie magna ac, maximus semper diam. 
-- name: Marketing
+    We will create a 30-60 second advertising video for your business. We highly recommend this package to reach
+    a much larger audience and increase your sales.
+  example:
+    description: >
+      Here is an example of a video we created for "Hidden Gem Guitars."
+      The video showcases the store and the owner's passion for guitars.
+    youtube: https://www.youtube.com/embed/9C_DFOsihrY?si=dOQOdtuEh9RQ9oVe
+- name: Package 3 - $90
+  id: package-3
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac accumsan nisl, ac varius lacus. 
-    Cras porttitor sodales ex, eget laoreet odio placerat vel. Sed interdum dapibus sollicitudin. 
-    Ut ultrices feugiat erat, ac lobortis enim luctus sed. Nunc vitae risus massa. Vivamus vitae arcu consequat, facilisis arcu in, efficitur sapien. 
-    Etiam at orci euismod, venenatis nibh sit amet, venenatis lectus. Nunc efficitur laoreet dolor at molestie. 
-    Nam tincidunt odio leo, vitae blandit augue mollis sed. Aenean finibus sem vel felis eleifend auctor. 
-    Nunc consectetur posuere orci. Duis tellus ligula, blandit molestie magna ac, maximus semper diam. 
+    Includes Package 1 and 2 at 10% off. This is our most premium package and we highly recommend it for businesses
+    of all types that want to begin their journey to success.
+  example:
+    description: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Morbi scelerisque varius ex in lobortis.
+      Nunc consequat tincidunt odio, ut porta ex volutpat non. 
+      Nunc dignissim tellus velit, id dictum urna vulputate et.

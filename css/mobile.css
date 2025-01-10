@@ -18,4 +18,20 @@
     #about > div {
         width: 90%;
     }
+    
+    #about > img {
+        transition: none;    
+    }
+
+    #about > img:hover {
+        transform: none;
+    }
+
+    #services > div > div {
+        transition: none;
+    }
+
+    #services > div > div:hover {
+        transform: none;
+    }
 }

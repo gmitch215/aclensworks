@@ -15,25 +15,35 @@ layout: default
         <h2>Efficient, Reliable, Local</h2>
         {{ content }}
     </div>
-    <img src="/assets/cook-county.jpg" alt="Cook County"/>
+    <img src="/assets/homewood.png" alt="Cook County"/>
 </div>
 
 <div class="box" id="services">
     <h2>Services</h2>
     <div>
         {% for service in site.data.services %}
-        <div>
+        <div onclick="openService(document.getElementById('{{ service.id }}'))">
             <h3>{{ service.name }}</h3>
             <p>{{ service.description }}</p>
+            <p><strong>Click for More...</strong></p>
         </div>
+        <dialog id="{{ service.id }}">
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+            <p>{{ service.example.description }}</p>
+
+            <div class="box">
+                {% if service.example.youtube %}
+                <iframe src="{{ service.example.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                {% endif %}
+            </div>
+
+            <div class="box">
+                <button onclick="closeService(document.getElementById('{{ service.id }}'))">Close</button>
+            </div>
+        </dialog>
         {% endfor %}
     </div>
-</div>
-
-<div class="box bg-secondary" id="example">
-    <h1>Example</h1>
-    <h2>Hidden Gem Guitars - Flossmoor, IL</h2>
-    <iframe src="https://www.youtube.com/embed/9C_DFOsihrY?si=dOQOdtuEh9RQ9oVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div class="box bg-primary" id="contact-us">

@@ -85,6 +85,46 @@ a {
     animation: fadeIn 1s ease-in-out;
 }
 
+.image-section {
+    width: 100%;
+    margin: 4vh 0;
+}
+
+.image-grid {
+    padding-top: 2vh;
+
+    width: 100%;
+    height: auto;
+    min-width: 128px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.image-grid > img {
+    height: 30vh;
+    min-width: 256px;
+    width: 100%;
+
+    object-fit: cover;
+    place-self: center;
+
+    border: 4px solid var(--accent-color);
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: border 0.25s ease-in-out;
+}
+
+.image-grid > img:hover {
+    border: 4px solid var(--primary-color);
+    transition: border 0.25s ease-in-out;
+}
+
 #logo {
     height: auto;
     width: 10vw;
@@ -181,6 +221,8 @@ header {
 
 dialog {
     width: 60%;
+    max-height: 90%;
+    overflow-x: hidden;
 }
 
 dialog button {
@@ -193,7 +235,7 @@ dialog button {
 
 dialog iframe {
     aspect-ratio: 16 / 9;
-    width: 90vw;
+    width: 90%;
     max-width: 576px;
     height: auto;
 
@@ -203,9 +245,71 @@ dialog iframe {
     margin-bottom: 2vh;
 }
 
+dialog.full-image {
+    width: 65vw;
+}
+
+dialog.full-image > div {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog.full-image > div > div > img {
+    max-height: 80vh;
+    max-width: 95%;
+    width: auto;
+
+    border: 4px solid var(--primary-color);
+    border-radius: 4px;
+
+    margin-bottom: 2vh;
+}
+
+.cross-out {
+    aspect-ratio: 1;
+    min-width: 32px;
+    max-width: 48px;
+    width: 5vw;
+    height: auto;
+
+    position: fixed;
+    margin-left: 58%;
+    cursor: pointer;
+}
+
 #example {
     padding-bottom: 8vh;
     text-align: center;
+}
+
+#testimonial > h2 {
+    margin-top: 8vh;
+}
+
+#testimonial {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.25em;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 2px solid black;
+}
+
+#testimonial > div {
+    width: 40%;
+    padding: 2vh;
+    border: 2px solid white;
+
+    margin-bottom: 24vh;
 }
 
 #contact-us {
@@ -218,6 +322,7 @@ dialog iframe {
 }
 
 #contact-us > img {
+    min-width: 256px;
     width: 20%;
     height: auto;
     border: 4px solid black;
@@ -245,6 +350,10 @@ dialog iframe {
     flex-direction: row;
     justify-content: center;
     column-gap: 2vw;
+}
+
+#contact-us > div > div > div {
+    max-width: 50%;
 }
 
 #contact-us > div > div > a {

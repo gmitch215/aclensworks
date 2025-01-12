@@ -22,12 +22,15 @@ layout: default
     <h2>Services</h2>
     <div>
         {% for service in site.data.services %}
-        <div onclick="openService(document.getElementById('{{ service.id }}'))">
+        <div onclick="openDialog(document.getElementById('{{ service.id }}'))">
             <h3>{{ service.name }}</h3>
             <p>{{ service.description }}</p>
             <p><strong>Click for More...</strong></p>
         </div>
         <dialog id="{{ service.id }}">
+            <div class="box">
+                <img class="cross-out" src="/assets/cross.png" alt="Close" onclick="closeDialog(document.getElementById('{{ service.id }}'))"/>
+            </div>
             <h3>{{ service.name }}</h3>
             <p>{{ service.description }}</p>
             <p>{{ service.example.description }}</p>
@@ -35,14 +38,44 @@ layout: default
             <div class="box">
                 {% if service.example.youtube %}
                 <iframe src="{{ service.example.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                {% elsif service.example.images %}
+                    {% for section in service.example.images %}
+                    <div class="box image-section">
+                        <h4>{{ section.title }}</h4>
+                        {% assign max = section.max %}
+                        <div class="image-grid">
+                            {% for i in (1..max) %}
+                            <img src="/assets/photos/{{ section.id }}{{ i }}.png" alt="{{ section.title }} #{{ i }}" title="Photo by {{ section.title }} - #{{ i }}" onclick="openDialog(document.getElementById('{{ section.id }}-{{ i }}'))"/>
+                            <dialog id="{{ section.id }}-{{ i }}" class="full-image">
+                                <div>
+                                    <div class="box">
+                                        <h4>Photo by {{ section.title }} - #{{ i }}</h4>
+                                        <img src="/assets/photos/{{ section.id }}{{ i }}.png" alt="{{ section.title }} #{{ i }}" title="Photo by {{ section.title }} - #{{ i }}"/>
+                                        <button onclick="closeDialog(document.getElementById('{{ section.id }}-{{ i }}'))">Close</button>
+                                    </div>
+                                </div>
+                            </dialog>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
                 {% endif %}
             </div>
 
             <div class="box">
-                <button onclick="closeService(document.getElementById('{{ service.id }}'))">Close</button>
+                <button onclick="closeDialog(document.getElementById('{{ service.id }}'))">Close</button>
             </div>
         </dialog>
         {% endfor %}
+    </div>
+</div>
+
+<div class="box" id="testimonial">
+    <img class="background" src="/assets/flossmoor2.jpg" alt="Flossmoor"/>
+    <h2>Testimonial</h2>
+    <div class="box">
+        <p>{{ site.data.testimonial.text }}</p>
+        <p>- {{ site.data.testimonial.author }}</p>
     </div>
 </div>
 

@@ -1,15 +1,3 @@
-@media (max-width: 1200px) {
-    #services > div {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 8vh;
-    }
-
-    #services > div > div {
-        width: 90%;
-    }
-}
-
 @media (max-width: 1000px) {
     #about {
         flex-direction: column;
@@ -33,5 +21,36 @@
 
     #services > div > div:hover {
         transform: none;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid > img {
+        width: 80%;
+        min-width: 192px;
+        height: auto;
+    
+        object-fit: cover;
+        place-self: center;
+
+        transition: none;
+    }
+
+    .image-grid > img:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 864px) {
+    #services > div {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 8vh;
+    }
+
+    #services > div > div {
+        width: 90%;
     }
 }

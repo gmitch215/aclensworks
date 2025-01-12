@@ -37,6 +37,7 @@ main {
 }
 
 html, body, main {
+    overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -70,10 +71,12 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .background {
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
 
     filter: blur(3px);
     position: absolute;
@@ -220,6 +223,7 @@ header {
 }
 
 dialog {
+    min-width: 300px;
     width: 60%;
     max-height: 90%;
     overflow-x: hidden;
@@ -246,6 +250,7 @@ dialog iframe {
 }
 
 dialog.full-image {
+    min-width: 320px;
     width: 65vw;
 }
 
@@ -261,6 +266,7 @@ dialog.full-image > div {
 
 dialog.full-image > div > div > img {
     max-height: 80vh;
+    min-width: 256px;
     max-width: 95%;
     width: auto;
 
@@ -288,7 +294,7 @@ dialog.full-image > div > div > img {
 }
 
 #testimonial > h2 {
-    margin-top: 8vh;
+    margin-top: 6vh;
 }
 
 #testimonial {
@@ -305,11 +311,13 @@ dialog.full-image > div > div > img {
 }
 
 #testimonial > div {
-    width: 40%;
+    min-width: 256px;
+    max-width: 640px;
+    width: 60%;
     padding: 2vh;
     border: 2px solid white;
 
-    margin-bottom: 24vh;
+    margin-bottom: 18vh;
 }
 
 #contact-us {

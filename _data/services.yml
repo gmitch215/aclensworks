@@ -5,10 +5,16 @@
     highly recommended for newly opened businesses that want to make an impact on the Homewood-Flossmoor community.
   example:
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Morbi scelerisque varius ex in lobortis.
-      Nunc consequat tincidunt odio, ut porta ex volutpat non. 
-      Nunc dignissim tellus velit, id dictum urna vulputate et.
+      Here are some photos by our team. You can click on them to view the full image.
+    images:
+      - name: Images by Aidan Klauk
+        title: Aidan
+        id: aidan
+        max: 6
+      - name: Images by Charlie Watchel
+        title: Charlie
+        id: charlie
+        max: 5
 - name: Package 2 - $70
   id: package-2
   description: >

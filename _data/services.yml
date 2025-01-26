@@ -1,4 +1,4 @@
-- name: Package 1 - $30
+- name: Package 1 - $50
   id: package-1
   description: >
     We will go inside your business and take professional photos of your products and services. This package is
@@ -15,7 +15,7 @@
         title: Charlie
         id: charlie
         max: 5
-- name: Package 2 - $70
+- name: Package 2 - $100
   id: package-2
   description: >
     We will create a 30-60 second advertising video for your business. We highly recommend this package to reach
@@ -25,7 +25,7 @@
       Here is an example of a video we created for "Hidden Gem Guitars."
       The video showcases the store and the owner's passion for guitars.
     youtube: https://www.youtube.com/embed/9C_DFOsihrY?si=dOQOdtuEh9RQ9oVe
-- name: Package 3 - $90
+- name: Package 3 - $140
   id: package-3
   description: >
     Includes Package 1 and 2 at 10% off. This is our most premium package and we highly recommend it for businesses

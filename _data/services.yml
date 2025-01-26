@@ -28,7 +28,7 @@
 - name: Package 3 - $140
   id: package-3
   description: >
-    Includes Package 1 and 2 at 10% off. This is our most premium package and we highly recommend it for businesses
+    Includes Package 1 and 2 at 7% off. This is our most premium package and we highly recommend it for businesses
     of all types that want to begin their journey to success.
   example:
     description: >

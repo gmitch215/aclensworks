@@ -36,21 +36,27 @@ layout: default
             <p>{{ service.example.description }}</p>
 
             <div class="box">
-                {% if service.example.youtube %}
-                <iframe src="{{ service.example.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                {% elsif service.example.images %}
+                {% if service.example.video %}
+                <iframe src="{{ service.example.video }}" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                {% endif %}
+
+                {% if service.example.images %}
                     {% for section in service.example.images %}
+                    {% assign image_type = section.type %}
+                    {% if image_type == nil %}
+                        {% assign image_type = "png" %}
+                    {% endif %}
                     <div class="box image-section">
-                        <h4>{{ section.title }}</h4>
+                        <h4>{{ section.name }}</h4>
                         {% assign max = section.max %}
                         <div class="image-grid">
                             {% for i in (1..max) %}
-                            <img src="/assets/photos/{{ section.id }}{{ i }}.png" alt="{{ section.title }} #{{ i }}" title="Photo by {{ section.title }} - #{{ i }}" onclick="openDialog(document.getElementById('{{ section.id }}-{{ i }}'))"/>
+                            <img src="/assets/photos/{{ section.id }}{{ i }}.{{ image_type }}" alt="{{ section.title }} #{{ i }}" title="Photo by {{ section.title }} - #{{ i }}" onclick="openDialog(document.getElementById('{{ section.id }}-{{ i }}'))"/>
                             <dialog id="{{ section.id }}-{{ i }}" class="full-image">
                                 <div>
                                     <div class="box">
                                         <h4>Photo by {{ section.title }} - #{{ i }}</h4>
-                                        <img src="/assets/photos/{{ section.id }}{{ i }}.png" alt="{{ section.title }} #{{ i }}" title="Photo by {{ section.title }} - #{{ i }}"/>
+                                        <img src="/assets/photos/{{ section.id }}{{ i }}.{{ image_type }}" alt="{{ section.title }} #{{ i }}" title="Photo by {{ section.title }} - #{{ i }}"/>
                                         <button onclick="closeDialog(document.getElementById('{{ section.id }}-{{ i }}'))">Close</button>
                                     </div>
                                 </div>

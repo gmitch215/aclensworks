@@ -24,7 +24,7 @@
     description: >
       Here is an example of a video we created for "Hidden Gem Guitars."
       The video showcases the store and the owner's passion for guitars.
-    youtube: https://www.youtube.com/embed/9C_DFOsihrY?si=dOQOdtuEh9RQ9oVe
+    video: https://www.youtube.com/embed/9C_DFOsihrY?si=dOQOdtuEh9RQ9oVe
 - name: Package 3 - $140
   id: package-3
   description: >
@@ -32,7 +32,12 @@
     of all types that want to begin their journey to success.
   example:
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Morbi scelerisque varius ex in lobortis.
-      Nunc consequat tincidunt odio, ut porta ex volutpat non. 
-      Nunc dignissim tellus velit, id dictum urna vulputate et.
+      This package includes everything from Package 1 and 2 at a discounted price.
+      Here is an example of a video we created for "LouLouBelle." The video showcases the store and the owner's passion for fashion.
+    video: https://drive.google.com/file/d/1H4KuNJbUOZyHWXcnbkGUNnEoiDfB6_Ma/preview
+    images:
+      - name: Images of LouLouBelle
+        title: LouLouBelle
+        id: llb
+        max: 15
+        type: jpg

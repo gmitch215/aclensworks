@@ -39,5 +39,5 @@
       - name: Images of LouLouBelle
         title: LouLouBelle
         id: llb
-        max: 15
+        max: 13
         type: jpg

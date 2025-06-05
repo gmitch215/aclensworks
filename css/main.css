@@ -44,6 +44,10 @@ html, body, main {
     padding: 0;
 }
 
+p, span {
+    font-size: 1.1em;
+}
+
 h1 {
     margin-bottom: 0;
 }
